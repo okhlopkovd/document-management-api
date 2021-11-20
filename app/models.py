@@ -12,3 +12,12 @@ class EmployeeModel(BASE):
     first_name = Column(String)
     last_name = Column(String)
     title = Column(String)
+
+
+class SupervisorModel(BASE):
+    __tablename__ = "supervisor"
+
+    id = Column(Integer, primary_key=True)
+    first_name = Column(String)
+    last_name = Column(String)
+
