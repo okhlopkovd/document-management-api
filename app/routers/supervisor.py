@@ -27,7 +27,8 @@ async def add_supervisor(first_name: str, last_name: str):
 
 @router.delete("/{supervisor_id}")
 async def delete_employee(supervisor_id: str):
-    supervisor_query.filter_by(id=supervisor_id).delete()
+    supervisor = supervisor_query.filter_by(id=supervisor_id).one()
+    session.delete(supervisor)
     session.commit()
 
 

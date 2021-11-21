@@ -31,7 +31,8 @@ async def add_employee(first_name: str, last_name: str, department_name: str, ti
 
 @router.delete("/{employee_id}")
 async def delete_employee(employee_id: str):
-    employee_query.filter_by(id=employee_id).delete()
+    employee = employee_query.filter_by(id=employee_id).one()
+    session.delete(employee)
     session.commit()
 
 
