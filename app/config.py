@@ -1,5 +1,5 @@
 DATABASE_NAME = "document_management"
-DATABASE_URL = f"postgresql://postgres:Moonlight200ppscore@localhost:8000/{DATABASE_NAME}"
+DATABASE_URL = f"postgresql://postgres:password@localhost:8000/{DATABASE_NAME}"
 EMPLOYEE_PREFIX = "/employee"
 SUPERVISOR_PREFIX = "/supervisor"
 DOCUMENT_PREFIX = "/document"
